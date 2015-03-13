@@ -1,0 +1,74 @@
+<div class="container">
+
+
+  <header>
+    <div class="jumbotron">
+      
+      {{#link-to 'home'}}<img src="img/AGLI_logo.jpg" class="logo pull-left">{{/link-to}}
+      {{#link-to 'home'}}<h1>African Great Lakes Initiative <small> of the Friends Peace Teams</small></h1>{{/link-to}}
+
+      <nav class="navbar">
+        <div class="container-fluid">
+
+          <div class="navbar-header">
+             <button type="button" class="navbar-toggle" data-toggle="collapse" 
+                data-target="#my-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+             </button>
+          </div>
+
+          <div class="collapse navbar-collapse" id="my-navbar-collapse">
+            <ul class="nav navbar-nav myMenu">
+              <li class="top-level-menu-item" {{action 'clearHighlight'}}>{{#link-to 'home' tagName="li"}}<p>Home</p>{{/link-to}}</li>
+              <li class="top-level-menu-item" {{action 'clearHighlight'}}>{{#link-to 'about' tagName="li"}}<p>About</p>{{/link-to}}</li>
+              <li class="dropdown top-level-menu-item" id="programs-dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><p>Programs <span class="caret"></span></p></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li class="submenu-item" {{action 'highlightProgramsDropdown'}}>{{#link-to 'programs' tagName="li"}}<p>Summary</p>{{/link-to}}</li>
+                  <li class="submenu-item">{{#link-to 'avp' tagName="li"}}<p>AVP</p>{{/link-to}}</li>
+                  <li class="submenu-item">{{#link-to 'hroc' tagName="li"}}<p>HROC</p>{{/link-to}}</li>
+                  <li class="submenu-item">{{#link-to 'workcamps' tagName="li"}}<p>Workcamps</p>{{/link-to}}</li>
+                  <li class="submenu-item">{{#link-to 'fwa' tagName="li"}}<p>FWA</p>{{/link-to}}</li>
+                  <li class="submenu-item">{{#link-to 'talks' tagName="li"}}<p>Talks</p>{{/link-to}}</li>
+                  <li class="submenu-item">{{#link-to 'mediation' tagName="li"}}<p>Mediation</p>{{/link-to}}</li>
+                </ul>
+              </li>
+              <li class="dropdown top-level-menu-item" id="countries-dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><p>Countries <span class="caret"></span></p></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li class="submenu-item" {{action 'highlightCountriesDropdown'}}>{{#link-to 'countries' tagName="li"}}<p>About</p>{{/link-to}}</li>
+                  <li class="submenu-item">{{#link-to 'burundi' tagName="li"}}<p>Burundi</p>{{/link-to}}</li>
+                  <li class="submenu-item">{{#link-to 'congo' tagName="li"}}<p>Congo</p>{{/link-to}}</li>
+                  <li class="submenu-item">{{#link-to 'kenya' tagName="li"}}<p>Kenya</p>{{/link-to}}</li>
+                  <li class="submenu-item">{{#link-to 'rwanda' tagName="li"}}<p>Rwanda</p>{{/link-to}}</li>
+                  <li class="submenu-item">{{#link-to 'uganda' tagName="li"}}<p>Uganda</p>{{/link-to}}</li>
+                </ul>
+              </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right myMenu">
+              <button type="button" class="btn btn-danger navbar-btn" {{action 'clearHighlight'}}>{{#link-to 'donate' tagName="li"}}DONATE{{/link-to}}</button>
+              
+            </ul>
+
+
+          </div>
+        
+        </div>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <section>
+    {{outlet}}
+  </section>
+
+  <footer>
+  </footer>
+
+</div>
